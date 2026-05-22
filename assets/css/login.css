@@ -1,0 +1,175 @@
+/* ============================================================
+   ShStorage — Login / Register Page
+   ============================================================ */
+
+:root {
+  --bg-base:        #0d0f14;
+  --bg-surface:     #141720;
+  --bg-card:        #1a1e2b;
+  --border:         #262b3d;
+  --border-light:   #2e344a;
+  --accent:         #ff5722;
+  --accent-hover:   #e64a19;
+  --accent-blue:    #2196f3;
+  --text-primary:   #eef0f6;
+  --text-secondary: #9aa0b8;
+  --text-muted:     #5c6382;
+  --radius:         10px;
+  --radius-sm:      6px;
+  --transition:     .18s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 15px; }
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* ============================================================
+   WRAPPER
+   ============================================================ */
+.login-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ============================================================
+   LEFT PANEL — branding
+   ============================================================ */
+.login-left {
+  flex: 1;
+  background: linear-gradient(145deg, #0d0f14 0%, #141720 50%, #1a1226 100%);
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 60px 56px;
+  position: relative; overflow: hidden;
+}
+.login-left::before {
+  content: '👟';
+  position: absolute; right: -30px; bottom: -20px;
+  font-size: 18rem; opacity: .04; line-height: 1;
+  pointer-events: none;
+}
+
+.brand-block { margin-bottom: 48px; }
+.brand-logo-icon { font-size: 3rem; margin-bottom: 12px; }
+.brand-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem; letter-spacing: .06em;
+  color: var(--accent); line-height: 1;
+  margin-bottom: 8px;
+}
+.brand-tagline { font-size: 1rem; color: var(--text-secondary); }
+
+.brand-features { display: flex; flex-direction: column; gap: 12px; margin-bottom: 48px; }
+.feature-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: .9rem; color: var(--text-secondary);
+  padding: 10px 14px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.brand-footer {
+  font-size: .78rem; color: var(--text-muted);
+  letter-spacing: .12em; text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ============================================================
+   RIGHT PANEL — login form
+   ============================================================ */
+.login-right {
+  width: 440px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px 32px;
+  background: var(--bg-surface);
+}
+
+.login-box { width: 100%; max-width: 360px; }
+.login-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem; letter-spacing: .04em; margin-bottom: 4px;
+}
+.login-sub { font-size: .85rem; color: var(--text-muted); margin-bottom: 28px; }
+
+.alert {
+  padding: 11px 16px; border-radius: var(--radius-sm);
+  font-size: .85rem; margin-bottom: 18px;
+  border-left: 4px solid;
+}
+.alert-error   { background: rgba(244,67,54,.1);  border-color: #f44336; color: #ff8a80; }
+.alert-success { background: rgba(76,175,80,.1);  border-color: #4caf50; color: #a5d6a7; }
+
+.login-form { display: flex; flex-direction: column; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-label { font-size: .8rem; font-weight: 600; color: var(--text-secondary); }
+.input-field {
+  background: var(--bg-card); border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm); color: var(--text-primary);
+  padding: 10px 14px; font-size: .9rem; font-family: inherit;
+  transition: border-color var(--transition); width: 100%;
+}
+.input-field:focus { outline: none; border-color: var(--accent); }
+.input-field::placeholder { color: var(--text-muted); }
+
+.password-wrap { position: relative; }
+.password-wrap .input-field { padding-right: 44px; }
+.toggle-password {
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; color: var(--text-muted);
+  font-size: .95rem; cursor: pointer; padding: 0;
+  transition: color var(--transition);
+}
+.toggle-password:hover { color: var(--text-primary); }
+
+.btn-login {
+  width: 100%; background: var(--accent); color: #fff;
+  border: none; border-radius: var(--radius-sm);
+  padding: 11px; font-size: .95rem; font-weight: 600;
+  cursor: pointer; transition: background var(--transition);
+  margin-top: 4px;
+}
+.btn-login:hover { background: var(--accent-hover); }
+
+.login-divider {
+  text-align: center; font-size: .8rem; color: var(--text-muted);
+  position: relative; margin: 10px 0 6px;
+}
+
+.btn-register {
+  display: block; width: 100%; text-align: center;
+  background: transparent;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 10px; font-size: .88rem; font-weight: 600;
+  color: var(--text-secondary);
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+.btn-register:hover { border-color: var(--accent-blue); color: var(--accent-blue); background: rgba(33,150,243,.06); }
+
+.login-hint { font-size: .75rem; color: var(--text-muted); text-align: center; margin-top: 20px; }
+
+/* ============================================================
+   REGISTER PAGE EXTRAS
+   ============================================================ */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .login-left  { display: none; }
+  .login-right { width: 100%; padding: 40px 24px; }
+  .form-row    { grid-template-columns: 1fr; }
+}
