@@ -10,13 +10,13 @@ SHStorage is a PHP and MySQL-powered web application built for managing shoe inv
 
 ---
 
-## Members
+## Members & Contributions
 
-| Name | 
+| Name | Role |
 |------|------|
-| Benitez, Dexter I. - Developer, Documentation
-| Fernandez, Jhade Zymond R. - Developer, Documentation
-| Regulto, Kyle Cyrus T. - Developer, Documentation
+| Benitez, Dexter I. | Web Developer · Documentation |
+| Fernandez, Jhade Zymond R. | Web Developer · Documentation |
+| Regulto, Kyle Cyrus T. | Web Developer · Documentation |
 
 ---
 
@@ -63,5 +63,5 @@ SHStorage is a PHP and MySQL-powered web application built for managing shoe inv
 
 ## Deployment Link
 
-- infinityfree
->http://shoestorage.kesug.com/login.php 
+- **Hosted on:** InfinityFree
+- **Live URL:** http://shoestorage.kesug.com/login.php
