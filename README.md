@@ -12,7 +12,7 @@ SHStorage is a PHP and MySQL-powered web application built for managing shoe inv
 
 ## Members
 
-| Name & Role | 
+| Name | 
 |------|------|
 | Benitez, Dexter I. - Developer, Documentation
 | Fernandez, Jhade Zymond R. - Developer, Documentation
